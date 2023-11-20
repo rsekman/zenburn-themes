@@ -48,8 +48,8 @@ style "theme-default"
 	GtkRange	::stepper_size      = 0
 
 	GtkScrollbar		::min_slider_length = 30
-	GtkCheckButton	::indicator_size    = 10
-	GtkRadioButton	::indicator_size    = 10
+	GtkCheckButton	::indicator_size    = 14
+	GtkRadioButton	::indicator_size    = 14
 	GtkMenuBar		::internal-padding  = 0
 	GtkTreeView		::expander_size     = 14
 	GtkExpander		::expander_size     = 16
@@ -219,6 +219,11 @@ style "theme-combo" = "theme-button"
 
 }
 
+style "theme-check" = "theme-button" {
+	xthickness	= 5
+	ythickness	= 5
+}
+
 style "metacity-frame"
 {
 	bg[SELECTED]  = @selected_bg_color
@@ -259,6 +264,8 @@ widget_class "*Panel*b*"			style "panelbuttons"
 
 class "GtkWidget"	style "theme-default"
 class "GtkButton"	style "theme-button"
+class "GtkCheckButton"	style "theme-check"
+class "GtkRadioButton"	style "theme-check"
 class "GtkScale"	style "theme-button"
 class "GtkCombo"	style "theme-button"
 class "GtkRange"	style "theme-wide"
