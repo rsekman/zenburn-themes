@@ -109,6 +109,10 @@ style "theme-default"
 	}
 }
 
+style "theme-label" = "theme-default" {
+	fg[INSENSITIVE]	= @text_color
+}
+
 
 style "theme-wide" = "theme-default"
 {
@@ -263,6 +267,7 @@ widget_class "*Panel*Button"			style "panelbuttons"
 widget_class "*Panel*b*"			style "panelbuttons"
 
 class "GtkWidget"	style "theme-default"
+class "GtkLabel"	style "theme-label"
 class "GtkButton"	style "theme-button"
 class "GtkCheckButton"	style "theme-check"
 class "GtkRadioButton"	style "theme-check"
